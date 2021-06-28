@@ -77,6 +77,51 @@ body{
 }
 .wrapper_block-active{
     border-color: black;
+    z-index: 0;
+}
+.indicator{
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Gilroy';
+    z-index: 3;
+    transition: 0.5s;
+    animation: translate 0.3s;
+}
+
+.win{
+    width: 800px;
+    height: 100px;
+    color: rgb(60, 255, 60);
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 100px;
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 100px;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+@keyframes translate{
+    0%{
+        transform: translate(100px, 50px);
+    }
+    60%{
+        transform: translate(-20px, -10px);
+    }
+    80%{
+        transform: translate(20px, 10px);
+    }
+    100%{
+        transform: translate(0);
+    }
 }
 @keyframes gradient{
     0%{
